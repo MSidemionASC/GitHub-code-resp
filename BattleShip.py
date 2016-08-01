@@ -51,12 +51,13 @@ if sea[userX][userY]== sea[shipX][shipY]:
         print("You hit it")
 shipX = 0
 shipY = 1
-t = 0
-while userX != shipX and userY != shipY :
+missed = 0
+triesLeft = 5
+while userX != shipX and userY != shipY and missed < 5 :
     userX= int(input("enter 1st cord number between 0 and 4"))
     userY = int(input("enter 2nd cord number between 0 and 4"))  
     sea[userX][userY]
-    if sea[userX][userY]== sea[shipX][shipY]:
+    if sea[userX][userY] == sea[shipX][shipY]:
         fill(0,255,0)
         rect(userX*100,userY*100,100,100)
         print("You hit it")
@@ -64,7 +65,12 @@ while userX != shipX and userY != shipY :
         print("That was a miss")
         fill(255,0,0)
         rect(userX*100,userY*100,100,100)
-        
+        missed = missed + 1
+        triesLeft = 5
+        triesLeft = triesLeft-missed
+        print("You have " + triesLeft + " tries left")
+    if triesLeft == 0:
+        print("You have no more tries. GAME OVER")
         
         
         
