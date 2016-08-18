@@ -1,0 +1,16 @@
+.homePage {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/564x/e4/d6/31/e4d631d0ea0b13bb7dad94a8291e4823.jpg");
+    margin-left: 500px;
+}
+
+body{
+    text-align: center;
+}
+
+h1 {
+    color: rgba(255,255,0,120);
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px 4px #ff4040;
+}
